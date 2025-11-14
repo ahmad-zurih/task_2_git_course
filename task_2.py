@@ -13,3 +13,9 @@ print(df)
 # Task 1: Implement a function to calculate and print the average age of people in the DataFrame.
 # Task 2: Implement a function that counts and prints the number of unique countries represented in the DataFrame.
 
+def count_unique_countries(df):
+    unique_count = df['Country'].nunique()
+    print("Number of unique countries:", unique_count)
+
+count_unique_countries(df)
+
