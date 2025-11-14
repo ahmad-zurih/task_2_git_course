@@ -10,8 +10,20 @@ df = pd.DataFrame({
 # Print the entire DataFrame
 print(df)
 
-# Task 1: Implement a function to calculate and print the average age of people in the DataFrame.
-# Task 2: Implement a function that counts and prints the number of unique countries represented in the DataFrame.
+
+# Task 1: Function to calculate and print the average age
+def print_average_age(dataframe):
+    avg_age = dataframe['Age'].mean()
+    print(f"Average age: {avg_age:.2f}")
+
+# Task 2: Function to count and print the number of unique countries
+def print_unique_country_count(dataframe):
+    unique_count = dataframe['Country'].nunique()
+    print(f"Number of unique countries: {unique_count}")
+
+# Run tasks
+print_average_age(df)
+print_unique_country_count(df)
 
 def calculate_average_age(dataframe):
     average_age = dataframe['Age'].mean()
